@@ -1,0 +1,246 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6c5ce7, #ff7f50);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: 'Slabo 27px', serif;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff7f50;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#about p {
+    max-width: 600px;
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+/* Project Gallery */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project {
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-overlay p {
+    font-size: 14px;
+}
+
+.project-overlay strong {
+    font-weight: bold;
+}
+
+/* Contact Section */
+#contact {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+#contact a {
+    color: #6c5ce7;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#contact a:hover {
+    color: #ff7f50;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .project img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+/* About Section */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff7f50;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+#about p {
+    max-width: 600px;
+    font-size: 18px;
+    color: #555;
+    font-weight: bold;  /* Making the info bold */
+}
